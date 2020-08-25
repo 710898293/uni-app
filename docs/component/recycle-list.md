@@ -37,7 +37,7 @@ key|可选属性，用于指定列表数据中可以作为唯一标识的键值�
 如果省略了 switch 属性，则只会将第一个 `<cell-slot>` 视为模板，多余的模板将会被忽略。
 
 ```
-<recycle-list for="(item, i) in longList" switch="type">
+<recycle-list v-for="(item, i) in longList" switch="type">
   <cell-slot case="A">
     <text>- A {{i}} -</text>
   </cell-slot>
@@ -126,7 +126,7 @@ key|可选属性，用于指定列表数据中可以作为唯一标识的键值�
 
 #### 示例
 ```
-<recycle-list for="(item, i) in longList" switch="type">
+<recycle-list v-for="(item, i) in longList" switch="type">
   <cell-slot case="A">
     <text>- A {{i}} -</text>
   </cell-slot>
@@ -160,7 +160,7 @@ const longList = [
 如果将模板合并成一个，也可以省略 `switch` 和 `case`，将例子进一步简化：
 
 ```
-<recycle-list for="(item, i) in longList">
+<recycle-list v-for="(item, i) in longList">
   <cell-slot>
     <text>- {{item.type}} {{i}} -</text>
   </cell-slot>
